@@ -119,11 +119,17 @@
             flex: 1;
         }
 
+        .images-container {
+            flex: 1;
+            display: flex;
+            gap: 2rem;
+            min-width: 300px;
+            max-width: 800px;
+            margin-top: 2rem;
+        }
+
         .content-image {
             flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-            margin-top: 2rem;
             animation: fadeInRight 1.5s ease-in-out;
         }
 
@@ -207,9 +213,10 @@
                 flex-direction: column;
             }
 
-            .content-image {
-                margin-top: 1rem;
+            .images-container {
+                flex-direction: column;
                 min-width: 100%;
+                margin-top: 1rem;
             }
         }
     </style>
@@ -239,8 +246,13 @@
             <div class="animated-message">
                 Esta presentación va dirigida a nuestro público, empresas privadas y públicas, entes gubernamentales y más...
             </div>
-            <div class="content-image">
-                <img src="https://www.civilisac.org/civilis/wp-content/uploads/Nino-situacion-de-calle-pixeladas04-1200x800.jpg" alt="Niño en situación de calle">
+            <div class="images-container">
+                <div class="content-image">
+                    <img src="https://www.civilisac.org/civilis/wp-content/uploads/5db0050d3-966x640.jpg" alt="Imagen descriptiva 1">
+                </div>
+                <div class="content-image">
+                    <img src="https://www.civilisac.org/civilis/wp-content/uploads/Nino-situacion-de-calle-pixeladas04-1200x800.jpg" alt="Niño en situación de calle">
+                </div>
             </div>
         </div>
     </div>
