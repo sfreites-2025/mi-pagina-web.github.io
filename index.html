@@ -1,18 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página con Fondo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Completa</title>
     <style>
+        /* Estilos generales */
         body {
-            background-color: #87CEEB; /* Color celeste */
             margin: 0;
             font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
         }
-        h1 { color: white; text-shadow: 2px 2px 4px #000000; }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .burger-menu {
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        #inicio {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #servicios {
+            background-color: #ecf0f1;
+        }
+
+        #contacto {
+            background-color: #dfe6e9;
+        }
+
+        /* Diseño responsivo (para móviles) */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2c3e50;
+                padding: 1rem 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger-menu {
+                display: block;
+            }
+        }
+
+        /* Estilos adicionales */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
     </style>
 </head>
 <body>
-    <h1>¡Mi Página con Fondo Azul!</h1>
-    <p>Este es un ejemplo de fondo de color sólido.</p>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="logo">MiWeb</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="burger-menu">☰</div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <section id="inicio" class="section">
+        <h1>Bienvenido a Mi Página Web</h1>
+        <p>Un ejemplo completo con menú responsive, fondo degradado y secciones.</p>
+    </section>
+
+    <section id="servicios" class="section">
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos soluciones digitales a medida para tu negocio.</p>
+    </section>
+
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>📧 contacto@miweb.com | 📞 +123456789</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Menú hamburguesa para móviles
+        document.querySelector('.burger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Cierra el menú al hacer clic en un enlace (útil en móviles)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
