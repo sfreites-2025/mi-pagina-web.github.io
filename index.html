@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos generales */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
         }
@@ -42,7 +43,7 @@
             color: #ecf0f1;
             text-decoration: none;
             transition: color 0.3s;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
@@ -58,34 +59,37 @@
 
         /* Contenido principal */
         .main-content {
-            padding: 2rem;
+            padding: 4rem 2rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
             min-height: 70vh;
-            justify-content: center;
         }
 
         .main-title {
-            font-size: 3rem;
-            margin-bottom: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin: 0 0 3rem 0;
             color: #2c3e50;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeInDown 1.5s ease;
+            letter-spacing: 3px;
+            animation: fadeInDown 1s ease;
+            align-self: flex-start;
+            margin-top: -1rem;
         }
 
         .animated-message {
-            font-size: 1.2rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
             max-width: 600px;
-            margin: 1rem 0;
-            padding: 1.5rem;
+            margin: 0;
+            padding: 2rem;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s ease-in-out;
-            line-height: 1.6;
+            animation: fadeInLeft 1.5s ease-in-out;
+            line-height: 1.8;
+            text-align: left;
+            align-self: flex-start;
         }
 
         @keyframes fadeIn {
@@ -101,6 +105,17 @@
             to { 
                 opacity: 1; 
                 transform: translateY(0); 
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
 
@@ -127,12 +142,19 @@
             }
             
             .main-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+                margin-top: 0;
             }
             
             .animated-message {
-                padding: 1rem;
-                margin: 0.5rem;
+                padding: 1.5rem;
+                margin: 0;
+                font-size: 1.1rem;
+            }
+            
+            .main-content {
+                padding: 2rem 1rem;
             }
         }
     </style>
