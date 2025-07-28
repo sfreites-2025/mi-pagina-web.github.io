@@ -59,7 +59,10 @@
         /* Contenido principal */
         .main-content {
             padding: 2rem;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
         }
 
         h1 {
@@ -67,10 +70,20 @@
             margin-bottom: 1rem;
         }
 
-        p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+        .animated-message {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         /* Diseño responsivo */
@@ -93,6 +106,12 @@
 
             .burger-menu {
                 display: block;
+            }
+            
+            .main-content {
+                padding: 1rem;
+                align-items: center;
+                text-align: center;
             }
         }
     </style>
@@ -118,12 +137,9 @@
     <!-- Contenido de la página -->
     <div class="main-content">
         <h1>Bienvenido a la Página Principal</h1>
-        <p>Este es el archivo index.html. Usa el menú de navegación para visitar las otras páginas:</p>
-        <ul style="list-style: none; padding: 0;">
-            <li><a href="index2.html">Ir a Inicio (index2.html)</a></li>
-            <li><a href="index3.html">Ir a Servicios (index3.html)</a></li>
-            <li><a href="index4.html">Ir a Contacto (index4.html)</a></li>
-        </ul>
+        <div class="animated-message">
+            Esta es una prueba para hacer páginas en GitHub, practicar, etc. Utilizar esto hasta poder hacer algo más avanzado.
+        </div>
     </div>
 
     <!-- JavaScript -->
