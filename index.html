@@ -93,17 +93,21 @@
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
         }
 
-        .content-container {
+        .content-wrapper {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .text-container {
+            flex: 1;
+            min-width: 300px;
         }
 
         .animated-message {
             font-family: "Times New Roman", Times, serif;
             font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
             padding: 2rem;
             background-color: rgba(255, 255, 255, 0.85);
             border-radius: 8px;
@@ -116,18 +120,21 @@
             border-left: 5px solid #2c3e50;
         }
 
+        .images-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            min-width: 300px;
+        }
+
         .image-row {
             display: flex;
-            justify-content: center;
             gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
         }
 
         .content-image {
             flex: 1;
-            min-width: 300px;
-            max-width: 400px;
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -205,14 +212,12 @@
                 padding: 2rem 1rem;
             }
 
-            .image-row {
+            .content-wrapper {
                 flex-direction: column;
-                align-items: center;
             }
 
-            .content-image {
-                min-width: 100%;
-                max-width: 100%;
+            .image-row {
+                flex-direction: column;
             }
         }
     </style>
@@ -238,14 +243,16 @@
     <!-- Contenido de la página -->
     <div class="main-content">
         <h1 class="main-title">Mision Trabajo CCS</h1>
-        <div class="content-container">
-            <div class="animated-message">
-                Esta presentación va dirigida a nuestro público, empresas privadas y públicas, entes gubernamentales y más...
-            </div>
-            <div class="image-row">
-                <div class="content-image">
-                    <img src="https://www.civilisac.org/civilis/wp-content/uploads/5db0050d3-966x640.jpg" alt="Imagen descriptiva">
+        <div class="content-wrapper">
+            <div class="text-container">
+                <div class="animated-message">
+                    Esta presentación va dirigida a nuestro público, empresas privadas y públicas, entes gubernamentales y más...
                 </div>
+                <div class="content-image" style="margin-top: 2rem;">
+                    <img src="https://www.civilisac.org/civilis/wp-content/uploads/5db0050d3-966x640.jpg" alt="Imagen descriptiva 1">
+                </div>
+            </div>
+            <div class="images-container">
                 <div class="content-image">
                     <img src="https://www.civilisac.org/civilis/wp-content/uploads/Nino-situacion-de-calle-pixeladas04-1200x800.jpg" alt="Niño en situación de calle">
                 </div>
