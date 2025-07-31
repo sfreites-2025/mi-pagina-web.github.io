@@ -161,7 +161,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 1rem; /* Reducido de 2rem a 1rem para acercar las imágenes */
+            gap: 1rem;
             min-width: 250px;
             max-width: 35%;
         }
@@ -186,7 +186,7 @@
         .stats-image {
             flex: 1;
             animation: fadeIn 1.5s ease-in-out;
-            margin-top: 1rem; /* Reducido de 2rem a 1rem para subir la imagen */
+            margin-top: 1rem;
         }
 
         .stats-image img {
@@ -196,10 +196,24 @@
             border: 3px solid #fff;
         }
 
+        .vision-message {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1rem;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
         .street-child-image {
             margin-top: 6rem;
             animation: fadeInRight 1.5s ease-in-out;
-            margin-bottom: 1rem; /* Añadido para ajustar espacio entre imágenes */
+            margin-bottom: 1rem;
         }
 
         @keyframes fadeInDown {
@@ -271,7 +285,7 @@
                 margin-bottom: 2rem;
             }
             
-            .animated-message, .full-width-text {
+            .animated-message, .full-width-text, .vision-message {
                 padding: 1.5rem;
                 font-size: 1rem;
             }
@@ -341,6 +355,11 @@
                 </div>
                 <div class="stats-image">
                     <img src="http://cdn.statcdn.com/Infographic/images/normal/32751.jpeg" alt="Estadísticas sobre pobreza">
+                </div>
+                <div class="vision-message">
+                    <p>Nuestra visión trasciende fronteras, aunque el foco inicial está en Venezuela, aspiramos a extender esta iniciativa a otros estados del país y, eventualmente, a naciones que enfrenten desafíos similares. Para lograrlo, es esencial la alianza con empresas comprometidas, organizaciones sociales y actores clave que crean en el poder transformador de la acción conjunta.</p>
+                    <p>Este es más que un proyecto; es un llamado a la empatía, a la innovación social y, sobre todo, a la certeza de que otro futuro es posible. Porque nadie debería vivir en las calles, pero todos merecen una oportunidad para salir de ellas.</p>
+                    <p><strong>¿Estás listo para ser parte del cambio?</strong></p>
                 </div>
             </div>
         </div>
