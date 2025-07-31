@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Servicios - Misión Trabajo CCS</title>
     <style>
         /* Estilos generales */
@@ -19,10 +19,7 @@
         body::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background-color: rgba(255, 255, 255, 0.7);
             z-index: -1;
         }
@@ -36,11 +33,9 @@
             align-items: center;
             padding: 1rem 2rem;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             font-family: "Times New Roman", Times, serif;
             backdrop-filter: blur(5px);
             transition: all 0.3s ease;
@@ -55,34 +50,28 @@
             transform: translateX(-50%);
             transition: all 0.3s ease;
         }
-
         .nav-brand.visible {
             opacity: 1;
         }
-
         .logo {
             width: 60px;
             height: 60px;
         }
-
         .nav-links {
             list-style: none;
             display: flex;
             gap: 1.5rem;
             margin-left: auto;
         }
-
         .nav-links a {
             color: #ecf0f1;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 600;
         }
-
         .nav-links a:hover {
             color: #3498db;
         }
-
         .burger-menu {
             font-size: 1.5rem;
             cursor: pointer;
@@ -90,6 +79,7 @@
             color: white;
         }
 
+        /* Contenido principal */
         .main-content {
             padding: 4rem 2rem;
             display: flex;
@@ -101,108 +91,91 @@
 
         .main-title {
             font-family: "Times New Roman", Times, serif;
-            font-size: 3.5rem;
-            margin: 0 auto 3rem auto;
+            font-size: 3rem;
+            margin: 0 auto 2.5rem auto;
             color: #000000;
             text-transform: uppercase;
             letter-spacing: 3px;
-            animation: fadeInDown 1s ease;
             text-align: center;
-            width: 100%;
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+            animation: fadeInDown 1s ease;
         }
 
-        .services-intro {
+        .intro-text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 1.2rem;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.85);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.7;
             color: #333;
-            animation: fadeIn 1.5s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 1.8rem 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: center;
+            font-style: italic;
+            animation: fadeInLeft 1.5s ease forwards;
         }
 
-        .services-container {
+        .services-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 2.5rem;
             justify-content: center;
         }
 
         .service-card {
-            flex: 1;
-            min-width: 300px;
-            max-width: 400px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 2rem;
-            animation: fadeIn 1.5s ease-in-out;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            padding: 2.2rem;
+            max-width: 350px;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             transition: transform 0.3s ease;
+            animation: fadeIn 1.5s ease forwards;
         }
-
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
         }
-
-        .service-card h3 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            text-align: center;
-        }
-
-        .service-card ul {
-            padding-left: 1.5rem;
-        }
-
-        .service-card li {
-            margin-bottom: 0.8rem;
-            line-height: 1.6;
-        }
-
         .service-icon {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #3498db;
+            width: 70px;
+            height: 70px;
             margin-bottom: 1rem;
         }
+        .service-title {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border-bottom: 2.5px solid #3498db;
+            padding-bottom: 0.3rem;
+            width: 100%;
+            text-align: center;
+        }
+        .service-description {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.6;
+            text-align: center;
+        }
 
+        /* Animaciones */
         @keyframes fadeInDown {
-            from { 
-                opacity: 0; 
-                transform: translateY(-30px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
 
         /* Diseño responsivo */
@@ -218,31 +191,27 @@
                 padding: 1rem 0;
                 text-align: center;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .burger-menu {
                 display: block;
             }
-            
             .main-title {
-                font-size: 2.2rem;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            .intro-text {
+                font-size: 1rem;
+                padding: 1.2rem 1.5rem;
                 margin-bottom: 2rem;
             }
-            
-            .services-intro {
-                padding: 1.5rem;
-                font-size: 1rem;
+            .services-grid {
+                flex-direction: column;
+                gap: 1.8rem;
             }
-            
-            .main-content {
-                padding: 2rem 1rem;
-            }
-
             .service-card {
-                min-width: 100%;
+                max-width: 100%;
             }
         }
     </style>
@@ -251,122 +220,90 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="logo">
-            <img src="https://img.freepik.com/vector-premium/logotipo-lujo-sf_786241-5.jpg" alt="Logo SF" style="width:100%; height:auto; object-fit: contain;">
+            <img src="https://img.freepik.com/vector-premium/logotipo-lujo-sf_786241-5.jpg" alt="Logo SF" style="width:100%; height:auto; object-fit: contain;" />
         </div>
-        <div class="nav-brand">Mision Trabajo CCS</div>
+        <div class="nav-brand">Misión Trabajo CCS</div>
         <ul class="nav-links">
             <li><a href="index2.html">Inicio</a></li>
-            <li><a href="index3.html">Servicios</a></li>
+            <li><a href="index3.html" aria-current="page">Servicios</a></li>
             <li><a href="index4.html">Contacto</a></li>
         </ul>
-        <div class="burger-menu">☰</div>
+        <div class="burger-menu" aria-label="Menú móvil">☰</div>
     </nav>
 
-    <!-- Contenido de la página -->
-    <div class="main-content">
-        <h1 class="main-title" id="main-title">Nuestros Servicios</h1>
-        
-        <div class="services-intro">
-            En Misión Trabajo CCS ofrecemos un programa integral de atención y reinserción social diseñado específicamente para personas en situación de calle en Caracas. Nuestros servicios combinan asistencia inmediata con formación para el desarrollo de habilidades.
-        </div>
-        
-        <div class="services-container">
-            <div class="service-card">
-                <div class="service-icon">🛠️</div>
-                <h3>Capacitación Laboral</h3>
-                <ul>
-                    <li>Cursos técnicos en áreas con alta demanda laboral</li>
-                    <li>Talleres de habilidades blandas (comunicación, trabajo en equipo)</li>
-                    <li>Formación en oficios tradicionales (panadería, construcción, etc.)</li>
-                    <li>Capacitación en tecnología básica</li>
-                    <li>Programas de alfabetización para adultos</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🏥</div>
-                <h3>Atención Integral</h3>
-                <ul>
-                    <li>Evaluación médica y psicológica inicial</li>
-                    <li>Programa de nutrición y alimentación básica</li>
-                    <li>Atención odontológica básica</li>
-                    <li>Terapia psicológica individual y grupal</li>
-                    <li>Tratamiento para adicciones (en alianza con especialistas)</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🤝</div>
-                <h3>Inserción Laboral</h3>
-                <ul>
-                    <li>Bolsa de trabajo exclusiva para participantes</li>
-                    <li>Ferias de empleo con empresas aliadas</li>
-                    <li>Acompañamiento en procesos de selección</li>
-                    <li>Seguimiento post-contratación (6 meses)</li>
-                    <li>Programa de emprendimiento para proyectos autogestionados</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🏠</div>
-                <h3>Reinserción Social</h3>
-                <ul>
-                    <li>Albergue temporal (hasta 6 meses)</li>
-                    <li>Asesoría legal para documentación</li>
-                    <li>Mediación familiar (cuando aplicable)</li>
-                    <li>Talleres de educación financiera básica</li>
-                    <li>Actividades culturales y recreativas</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">📈</div>
-                <h3>Desarrollo Personal</h3>
-                <ul>
-                    <li>Talleres de autoestima y crecimiento personal</li>
-                    <li>Programa de mentoría con voluntarios profesionales</li>
-                    <li>Actividades deportivas y de salud preventiva</li>
-                    <li>Grupos de apoyo y círculos de conversación</li>
-                    <li>Talleres de manejo de estrés y emociones</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">🌱</div>
-                <h3>Sostenibilidad</h3>
-                <ul>
-                    <li>Huertos urbanos comunitarios</li>
-                    <li>Talleres de reciclaje y oficios ecológicos</li>
-                    <li>Programa "Apadrina un Proyecto" para emprendimientos</li>
-                    <li>Capacitación en mantenimiento de espacios públicos</li>
-                    <li>Talleres de economía circular</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!-- Contenido Principal -->
+    <main class="main-content" role="main">
+        <h1 class="main-title">Nuestros Servicios</h1>
 
-    <!-- JavaScript -->
+        <p class="intro-text">
+            En Misión Trabajo CCS ofrecemos un conjunto integral de servicios diseñados para facilitar la reinserción social y laboral de personas en situación de vulnerabilidad. Nuestro enfoque multidimensional incluye capacitación, apoyo psicológico, intermediación laboral y acompañamiento continuo para un cambio sostenible.
+        </p>
+
+        <section class="services-grid" aria-label="Lista de servicios ofrecidos">
+            <article class="service-card" tabindex="0">
+                <img src="https://cdn-icons-png.flaticon.com/512/3014/3014506.png" alt="Capacitación Laboral" class="service-icon" />
+                <h2 class="service-title">Capacitación Laboral</h2>
+                <p class="service-description">
+                    Programas de formación técnica y vocacional adaptados a las demandas del mercado laboral para desarrollar habilidades útiles que faciliten la inserción económica.
+                </p>
+            </article>
+
+            <article class="service-card" tabindex="0">
+                <img src="https://cdn-icons-png.flaticon.com/512/3159/3159987.png" alt="Apoyo Psicológico" class="service-icon" />
+                <h2 class="service-title">Apoyo Psicológico</h2>
+                <p class="service-description">
+                    Atención y acompañamiento emocional para fortalecer la autoestima, resiliencia y bienestar mental de las personas, facilitando su proceso de transformación y reintegración.
+                </p>
+            </article>
+
+            <article class="service-card" tabindex="0">
+                <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Intermediación Laboral" class="service-icon" />
+                <h2 class="service-title">Intermediación Laboral</h2>
+                <p class="service-description">
+                    Vinculación directa con empresas y organizaciones aliadas para facilitar la búsqueda de empleo digno y la inserción formal en el mercado laboral.
+                </p>
+            </article>
+
+            <article class="service-card" tabindex="0">
+                <img src="https://cdn-icons-png.flaticon.com/512/3022/3022203.png" alt="Acompañamiento Continuo" class="service-icon" />
+                <h2 class="service-title">Acompañamiento Continuo</h2>
+                <p class="service-description">
+                    Seguimiento permanente para asegurar la estabilidad laboral y social, ofreciendo soporte, formación complementaria y resolución de conflictos.
+                </p>
+            </article>
+
+            <article class="service-card" tabindex="0">
+                <img src="https://cdn-icons-png.flaticon.com/512/2638/2638906.png" alt="Programas Sociales" class="service-icon" />
+                <h2 class="service-title">Programas Sociales</h2>
+                <p class="service-description">
+                    Iniciativas de apoyo comunitario que incluyen asistencia médica básica, alimentación y acceso a servicios sociales para mejorar la calidad de vida.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- JavaScript para menú hamburguesa -->
     <script>
-        // Menú hamburguesa para móviles
-        document.querySelector('.burger-menu').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
 
-        // Cierra el menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
+                navLinks.classList.remove('active');
             });
         });
 
-        // Control del título en la barra de navegación
+        // Control visibilidad título en navbar al hacer scroll
         const navBrand = document.querySelector('.nav-brand');
-        const mainTitle = document.getElementById('main-title');
-        
+        const mainTitle = document.querySelector('.main-title');
+
         window.addEventListener('scroll', () => {
             const titlePosition = mainTitle.getBoundingClientRect().top;
-            
-            if (titlePosition < 0) {
+            if(titlePosition < 0) {
                 navBrand.classList.add('visible');
             } else {
                 navBrand.classList.remove('visible');
