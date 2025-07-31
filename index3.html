@@ -69,7 +69,8 @@
             transition: color 0.3s;
             font-weight: 600;
         }
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
             color: #3498db;
         }
         .burger-menu {
@@ -92,7 +93,7 @@
         .main-title {
             font-family: "Times New Roman", Times, serif;
             font-size: 3rem;
-            margin: 0 auto 2.5rem auto;
+            margin: 0 auto 2rem auto;
             color: #000000;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -104,17 +105,39 @@
 
         .intro-text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             line-height: 1.7;
             color: #333;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
-            padding: 1.8rem 2.5rem;
-            margin-bottom: 3rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.8rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             text-align: center;
             font-style: italic;
             animation: fadeInLeft 1.5s ease forwards;
+        }
+
+        /* Nota importante sobre el proyecto */
+        .project-note {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 8px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            text-align: center;
+            font-weight: 500;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .project-note strong {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .services-grid {
@@ -128,7 +151,7 @@
             background-color: rgba(255,255,255,0.9);
             border-radius: 10px;
             box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-            padding: 2.2rem;
+            padding: 2rem 2.5rem;
             max-width: 350px;
             flex: 1 1 300px;
             display: flex;
@@ -204,7 +227,12 @@
             .intro-text {
                 font-size: 1rem;
                 padding: 1.2rem 1.5rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            .project-note {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+                margin-bottom: 1.5rem;
             }
             .services-grid {
                 flex-direction: column;
@@ -238,6 +266,11 @@
         <p class="intro-text">
             En Misión Trabajo CCS ofrecemos un conjunto integral de servicios diseñados para facilitar la reinserción social y laboral de personas en situación de vulnerabilidad. Nuestro enfoque multidimensional incluye capacitación, apoyo psicológico, intermediación laboral y acompañamiento continuo para un cambio sostenible.
         </p>
+
+        <div class="project-note" role="note" aria-live="polite">
+            <strong>Nota Importante sobre el Proyecto:</strong>
+            "Misión Trabajo CCS es un proyecto con visión de futuro que busca ser una propuesta innovadora y sólida para la reinserción social y laboral. Actualmente, este proyecto se presenta como una iniciativa abierta a la evaluación y posible colaboración de empresas e instituciones interesadas en sumarse. Es importante destacar que, en esta etapa inicial, no contamos con viviendas propias, ni empleos directos disponibles. Nuestro objetivo es construir alianzas y diseñar un modelo sostenible que pueda materializarse en el mediano y largo plazo."
+        </div>
 
         <section class="services-grid" aria-label="Lista de servicios ofrecidos">
             <article class="service-card" tabindex="0">
