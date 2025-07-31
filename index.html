@@ -121,9 +121,9 @@
         }
 
         .text-container {
-            flex: 2; /* Aumentado de 1 a 2 para dar más espacio al texto */
+            flex: 2;
             min-width: 300px;
-            max-width: 70%; /* Limita el ancho máximo pero da más espacio que antes */
+            max-width: 60%; /* Ajustado para dejar espacio a la nueva imagen */
         }
 
         .animated-message {
@@ -139,7 +139,7 @@
             font-style: italic;
             color: #333;
             border-left: 5px solid #2c3e50;
-            width: 100%; /* Asegura que ocupe todo el ancho disponible */
+            width: 100%;
         }
 
         .full-width-text {
@@ -162,7 +162,7 @@
             flex-direction: column;
             gap: 2rem;
             min-width: 250px;
-            max-width: 30%; /* Reduce el ancho de las imágenes para dar más espacio al texto */
+            max-width: 35%; /* Ajustado para la nueva imagen */
         }
 
         .image-row {
@@ -176,6 +176,19 @@
         }
 
         .content-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 3px solid #fff;
+        }
+
+        .stats-image {
+            flex: 1;
+            animation: fadeIn 1.5s ease-in-out;
+            margin-top: 2rem;
+        }
+
+        .stats-image img {
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -298,6 +311,9 @@
             <div class="images-container">
                 <div class="content-image">
                     <img src="https://www.civilisac.org/civilis/wp-content/uploads/Nino-situacion-de-calle-pixeladas04-1200x800.jpg" alt="Niño en situación de calle">
+                </div>
+                <div class="stats-image">
+                    <img src="http://cdn.statcdn.com/Infographic/images/normal/32751.jpeg" alt="Estadísticas sobre pobreza">
                 </div>
             </div>
         </div>
