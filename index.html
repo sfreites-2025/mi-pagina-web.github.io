@@ -123,7 +123,7 @@
         .text-container {
             flex: 2;
             min-width: 300px;
-            max-width: 60%; /* Ajustado para dejar espacio a la nueva imagen */
+            max-width: 60%;
         }
 
         .animated-message {
@@ -162,7 +162,7 @@
             flex-direction: column;
             gap: 2rem;
             min-width: 250px;
-            max-width: 35%; /* Ajustado para la nueva imagen */
+            max-width: 35%;
         }
 
         .image-row {
@@ -193,6 +193,10 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border: 3px solid #fff;
+        }
+
+        .street-child-image {
+            margin-top: 3rem; /* Aumentado de 2rem a 3rem para bajar más la imagen */
         }
 
         @keyframes fadeInDown {
@@ -274,6 +278,10 @@
                 max-width: 100%;
                 flex: 1 1 100%;
             }
+            
+            .street-child-image {
+                margin-top: 2rem; /* Restauramos el margen para móviles */
+            }
         }
     </style>
 </head>
@@ -309,7 +317,7 @@
                 </div>
             </div>
             <div class="images-container">
-                <div class="content-image">
+                <div class="content-image street-child-image">
                     <img src="https://www.civilisac.org/civilis/wp-content/uploads/Nino-situacion-de-calle-pixeladas04-1200x800.jpg" alt="Niño en situación de calle">
                 </div>
                 <div class="stats-image">
