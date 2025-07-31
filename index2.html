@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inicio - Misión Trabajo CCS</title>
     <style>
         /* Estilos generales */
@@ -23,7 +23,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.7); /* Fondo más claro para mejor legibilidad */
+            background-color: rgba(255, 255, 255, 0.7);
             z-index: -1;
         }
 
@@ -90,6 +90,7 @@
             color: white;
         }
 
+        /* Contenido principal */
         .main-content {
             padding: 4rem 2rem;
             display: flex;
@@ -173,7 +174,7 @@
             margin-top: 0;
         }
 
-        /* Nueva sección añadida */
+        /* Sección del proyecto */
         .project-description {
             margin-top: 3rem;
             background-color: rgba(255, 255, 255, 0.9);
@@ -182,7 +183,7 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
             font-family: "Times New Roman", Times, serif;
             color: #2c3e50;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.7;
             max-width: 900px;
             margin-left: auto;
@@ -190,20 +191,52 @@
             animation: fadeIn 2s ease forwards;
         }
 
-        .project-description h4 {
-            color: #3498db;
+        .project-description h2 {
+            color: #2c3e50;
             margin-bottom: 1rem;
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-description h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
             font-weight: bold;
         }
 
+        .project-description ol {
+            padding-left: 1.5rem;
+            margin-top: 0;
+            color: #444;
+        }
+
+        .project-description ol li {
+            margin-bottom: 0.6rem;
+        }
+
+        .timeline-item h4 {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-item p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        /* Animaciones */
         @keyframes fadeInDown {
-            from { 
-                opacity: 0; 
-                transform: translateY(-30px); 
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
             }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
@@ -248,17 +281,17 @@
             .burger-menu {
                 display: block;
             }
-            
+
             .main-title {
                 font-size: 2.2rem;
                 margin-bottom: 2rem;
             }
-            
+
             .animated-message {
                 padding: 1.5rem;
                 font-size: 1.2rem;
             }
-            
+
             .main-content {
                 padding: 2rem 1rem;
             }
@@ -296,7 +329,7 @@
         <div class="content-wrapper">
             <div class="text-container">
                 <div class="animated-message">
-                    "Un proyecto para transformar vidas venezolanas"
+                    "Transformando vidas a través del trabajo digno y la inclusión social"
                 </div>
                 
                 <div class="mission-cards">
@@ -315,21 +348,38 @@
                         <p>Dignidad humana, solidaridad, trabajo en equipo, transparencia y compromiso social. Creemos en el potencial transformador del trabajo digno.</p>
                     </div>
                 </div>
-                
-                <!-- Nueva sección agregada -->
-                <div class="project-description" aria-label="Descripción del proyecto">
-                    <h4>Sobre el Proyecto y Plan de Desarrollo</h4>
-                    <p>
-                        Este proyecto surge con el propósito de crear un programa integral y sostenible que facilite la reinserción social y laboral de personas en situación de calle en Caracas y otras ciudades del país. La iniciativa combina capacitación, acompañamiento psicológico, alianzas con empresas y el desarrollo de oportunidades reales de empleo.
-                    </p>
-                    <p>
-                        El plan está estructurado en una fase inicial de 3 años, dedicada a establecer la infraestructura, formar alianzas estratégicas y pilotear programas de reinserción. Posteriormente, se proyecta una expansión gradual hasta cubrir otras regiones y consolidar mecanismos de seguimiento para garantizar el éxito y la sostenibilidad.
-                    </p>
-                    <p>
-                        En total, se estima que el desarrollo completo y la consolidación del programa tome entre 5 y 7 años, con evaluaciones periódicas para adaptarse a las necesidades cambiantes y asegurar un impacto duradero en la vida de las personas beneficiadas.
-                    </p>
+
+                <!-- Nueva sección sobre el proyecto -->
+                <div class="project-description">
+                    <h2>Nuestro Proyecto Integral</h2>
+                    <p>Misión Trabajo CCS es una iniciativa de desarrollo social que busca abordar de manera integral el problema de la mendicidad y la situación de calle en Caracas, combinando asistencia inmediata con soluciones estructurales a mediano y largo plazo.</p>
+                    
+                    <h3>Plan Estratégico 2023-2028</h3>
+                    <p>Nuestro modelo se basa en tres pilares fundamentales:</p>
+                    <ol>
+                        <li><strong>Primera Fase (Años 1-2):</strong> Establecimiento de centros de atención integral en zonas estratégicas de Caracas, con capacidad para brindar alimentación, atención médica básica y evaluación psicosocial.</li>
+                        <li><strong>Segunda Fase (Años 2-4):</strong> Implementación de programas de capacitación laboral adaptados a las necesidades del mercado y vinculación con empresas aliadas.</li>
+                        <li><strong>Tercera Fase (Años 4-5):</strong> Desarrollo de unidades productivas autogestionadas y expansión del modelo a otras ciudades principales del país.</li>
+                    </ol>
+                    
+                    <div class="timeline">
+                        <h3>Cronograma de Implementación</h3>
+                        <div class="timeline-item">
+                            <h4>2023 - Fase Inicial</h4>
+                            <p>Establecimiento del primer centro piloto en el municipio Libertador. Capacitación del equipo base y alianzas con primeros socios estratégicos.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2024-2025 - Expansión</h4>
+                            <p>Apertura de 3 centros adicionales en Caracas. Implementación del programa de formación laboral con 10 especialidades técnicas.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2026-2028 - Consolidación</h4>
+                            <p>Creación de la red de empresas aliadas (meta: 100+ empresas). Inicio de la réplica del modelo en Valencia y Maracaibo.</p>
+                        </div>
+                    </div>
+                    
+                    <p>Este plan quinquenal representa nuestro compromiso con una solución sostenible. Para 2028, proyectamos haber reintegrado a más de 2,000 personas al mercado laboral formal y haber reducido significativamente los índices de mendicidad en nuestras zonas de intervención.</p>
                 </div>
-                
             </div>
         </div>
     </div>
