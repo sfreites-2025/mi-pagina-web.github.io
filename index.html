@@ -13,7 +13,7 @@
             background: url('https://content.r9cdn.net/rimg/dimg/cf/40/a5abdc30-city-990-165a536cfb0.jpg?width=1366&height=768&xhint=1361&yhint=1216&crop=true') no-repeat center center fixed;
             background-size: cover;
             position: relative;
-            padding-top: 80px; /* Espacio para la navbar */
+            padding-top: 80px;
         }
 
         body::before {
@@ -27,7 +27,7 @@
             z-index: -1;
         }
 
-        /* Barra de navegación actualizada */
+        /* Barra de navegación */
         .navbar {
             background-color: rgba(44, 62, 80, 0.9);
             color: white;
@@ -196,7 +196,7 @@
         }
 
         .street-child-image {
-            margin-top: 3rem; /* Aumentado de 2rem a 3rem para bajar más la imagen */
+            margin-top: 4.5rem; /* Aumentado significativamente para bajar más la imagen */
         }
 
         @keyframes fadeInDown {
@@ -280,13 +280,13 @@
             }
             
             .street-child-image {
-                margin-top: 2rem; /* Restauramos el margen para móviles */
+                margin-top: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Menú de navegación actualizado con nuevo logo -->
+    <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="logo">
             <img src="https://img.freepik.com/vector-premium/logotipo-lujo-sf_786241-5.jpg" alt="Logo SF" style="width:100%; height:auto; object-fit: contain;">
@@ -334,7 +334,7 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Cierra el menú al hacer clic en un enlace (útil en móviles)
+        // Cierra el menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('active');
