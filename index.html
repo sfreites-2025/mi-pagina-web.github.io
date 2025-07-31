@@ -196,36 +196,18 @@
             border: 3px solid #fff;
         }
 
-        .vision-container {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .vision-image {
-            flex: 1;
-            animation: fadeInLeft 1.5s ease-in-out;
-        }
-
-        .vision-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 3px solid #fff;
-        }
-
         .vision-message {
-            flex: 2;
             font-family: "Times New Roman", Times, serif;
             font-size: 1rem;
             padding: 1.5rem;
             background-color: rgba(255, 255, 255, 0.85);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
             line-height: 1.6;
             text-align: justify;
             color: #333;
-            animation: fadeInRight 1.5s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .street-child-image {
@@ -333,18 +315,6 @@
             .stats-image {
                 margin-top: 1rem;
             }
-
-            .vision-container {
-                flex-direction: column;
-            }
-
-            .vision-image {
-                order: 1;
-            }
-
-            .vision-message {
-                order: 2;
-            }
         }
     </style>
 </head>
@@ -386,15 +356,10 @@
                 <div class="stats-image">
                     <img src="http://cdn.statcdn.com/Infographic/images/normal/32751.jpeg" alt="Estadísticas sobre pobreza">
                 </div>
-                <div class="vision-container">
-                    <div class="vision-image">
-                        <img src="https://www.r4v.info/sites/g/files/tmzbdl2426/files/styles/gallery_image/public/2022-10/Comunicado.png?itok=3JW-aWND" alt="Comunicado sobre ayuda humanitaria">
-                    </div>
-                    <div class="vision-message">
-                        <p>Nuestra visión trasciende fronteras, aunque el foco inicial está en Venezuela, aspiramos a extender esta iniciativa a otros estados del país y, eventualmente, a naciones que enfrenten desafíos similares. Para lograrlo, es esencial la alianza con empresas comprometidas, organizaciones sociales y actores clave que crean en el poder transformador de la acción conjunta.</p>
-                        <p>Este es más que un proyecto; es un llamado a la empatía, a la innovación social y, sobre todo, a la certeza de que otro futuro es posible. Porque nadie debería vivir en las calles, pero todos merecen una oportunidad para salir de ellas.</p>
-                        <p><strong>¿Estás listo para ser parte del cambio?</strong></p>
-                    </div>
+                <div class="vision-message">
+                    <p>Nuestra visión trasciende fronteras, aunque el foco inicial está en Venezuela, aspiramos a extender esta iniciativa a otros estados del país y, eventualmente, a naciones que enfrenten desafíos similares. Para lograrlo, es esencial la alianza con empresas comprometidas, organizaciones sociales y actores clave que crean en el poder transformador de la acción conjunta.</p>
+                    <p>Este es más que un proyecto; es un llamado a la empatía, a la innovación social y, sobre todo, a la certeza de que otro futuro es posible. Porque nadie debería vivir en las calles, pero todos merecen una oportunidad para salir de ellas.</p>
+                    <p><strong>¿Estás listo para ser parte del cambio?</strong></p>
                 </div>
             </div>
         </div>
